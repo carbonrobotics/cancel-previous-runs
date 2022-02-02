@@ -63,7 +63,7 @@ async function cancelDuplicates(
     resolvedId = workflowId
   }
 
-  core.info(`Workflow ID is: ${resolvedId}`)
+  core.info(`Hello! Workflow ID is: ${resolvedId}`)
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const sorted = new treemap.TreeMap<number, any>()
