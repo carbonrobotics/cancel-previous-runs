@@ -171,6 +171,7 @@ async function run(): Promise<void> {
     }
     branch = branch.replace(branchPrefix, '')
 
+    const workflowId = core.getInput('workflow')
     core.info(
       `Branch is ${branch}, repo is ${repo}, and owner is ${owner}, and id is ${selfRunId}`
     )
@@ -180,7 +181,7 @@ async function run(): Promise<void> {
       selfRunId,
       owner,
       repo,
-      undefined,
+      workflowId,
       branch,
       eventName
     )
